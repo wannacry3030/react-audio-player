@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   IoPlayBackSharp,
   IoPlayForwardSharp,
-  IoPlaySkipBackwardSharp,
   IoPlaySkipForwardSharp,
   IoPlaySkipBackSharp,
   IoPlaySharp,
