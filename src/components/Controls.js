@@ -13,6 +13,9 @@ import {
 
 const Controls = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const togglePlayPause = () => {
+    setIsPlaying((prev) => !prev);
+  };
   return (
     <div className="controls-wrapper">
       <div className="controls">
@@ -23,7 +26,9 @@ const Controls = () => {
           <IoPlayBackSharp />
         </button>
 
-        <button>{isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}</button>
+        <button onClick={togglePlayPause}>
+          {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
+        </button>
 
         <button>
           <IoPlayForwardSharp />
