@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { tracks } from "../data/tracks";
 
 //importando os elementos que formam o audio player
