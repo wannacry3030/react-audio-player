@@ -14,12 +14,14 @@ const AudioPlayer = () => {
   const audioRef = useRef();
   console.log(audioRef);
 
+  const ProgressBarRef = useRef();
+
   return (
     <div className="audio-player">
       <div className="inner">
         <DisplayTrack currentTrack={currentTrack} audioRef={audioRef} />
         <Controls audioRef={audioRef} />
-        <ProgressBar />
+        <ProgressBar ProgressBarRef={ProgressBarRef} />
       </div>
     </div>
   );
