@@ -16,7 +16,10 @@ const DisplayTrack = ({ currentTrack, audioRef }) => {
             </div>
           )}
         </div>
-        <div></div>
+        <div className="text">
+          <p className="title">{currentTrack.title}</p>
+          <p>{currentTrack.author}</p>
+        </div>
       </div>
     </div>
   );
