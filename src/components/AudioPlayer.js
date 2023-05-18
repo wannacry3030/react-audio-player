@@ -12,6 +12,7 @@ const AudioPlayer = () => {
 
   //referencia
   const audioRef = useRef();
+  console.log(audioRef);
 
   return (
     <div className="audio-player">
