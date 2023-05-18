@@ -1,7 +1,12 @@
+import DisplayTrack from "./DisplayTrack";
+
+//renderizando o conteudo da musica na tela do usuario
 const AudioPlayer = () => {
   return (
     <div className="audio-player">
-      <div className="inner">Audio player content</div>
+      <div className="inner">
+        <DisplayTrack />
+      </div>
     </div>
   );
 };
