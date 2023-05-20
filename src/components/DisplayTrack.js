@@ -1,4 +1,4 @@
-import { BsMusicNote, BsMusicNoteBeamed } from "react-icons/bs";
+import { BsMusicNoteBeamed } from "react-icons/bs";
 
 const DisplayTrack = ({ currentTrack, audioRef }) => {
   return (
