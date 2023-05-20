@@ -12,7 +12,7 @@ const AudioPlayer = () => {
   const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
   const [timeProgress, setTimeProgress] = useState(0);
   const [duration, setDuration] = useState(0);
-
+  const [volume, setVolume] = useState(60);
   //referencia
   const audioRef = useRef();
   console.log(audioRef);

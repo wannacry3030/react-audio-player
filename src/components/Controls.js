@@ -85,6 +85,13 @@ const Controls = ({
     }
   };
 
+  const [volume, setVolume] = useState(60);
+  useEffect(() => {
+    if (audioRef) {
+      audioRef.current.volume = volume / 100;
+    }
+  }, [volume, audioRef]);
+
   return (
     <div className="controls-wrapper">
       <div className="controls">
@@ -107,6 +114,16 @@ const Controls = ({
         <button onClick={handleNext}>
           <IoPlaySkipForwardSharp />
         </button>
+      </div>
+      <div className="volume">
+        <buttons>icons</buttons>
+        <input
+          type="range"
+          min={0}
+          max={100}
+          value={volume}
+          onChange={(e) => setVolume(e.target.value)}
+        />
       </div>
     </div>
   );
