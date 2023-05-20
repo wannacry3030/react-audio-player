@@ -1,8 +1,8 @@
-const ProgressBar = () => {
+const ProgressBar = ({ ProgressBarRef }) => {
   return (
     <div className="progress">
       <span className="time current">00:00</span>
-      <input type="range" />
+      <input type="range" ref={ProgressBarRef} />
       <span className="time">05:37</span>
     </div>
   );
