@@ -1,6 +1,6 @@
-const ProgressBar = ({ ProgressBarRef, audioRef, timeProgress, duration }) => {
+const ProgressBar = ({ progressBarRef, audioRef, timeProgress, duration }) => {
   const handleProgressChange = () => {
-    audioRef.current.currentTime = ProgressBarRef.current.value;
+    audioRef.current.currentTime = progressBarRef.current.value;
   };
 
   return (
@@ -8,7 +8,7 @@ const ProgressBar = ({ ProgressBarRef, audioRef, timeProgress, duration }) => {
       <span className="time current">{timeProgress}</span>
       <input
         type="range"
-        ref={ProgressBarRef}
+        ref={progressBarRef}
         defaultValue="0"
         onChange={handleProgressChange}
       />
