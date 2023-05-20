@@ -92,6 +92,8 @@ const Controls = ({
     }
   }, [volume, audioRef]);
 
+  const [muteVolume, setMuteVolume] = useState(false);
+
   return (
     <div className="controls-wrapper">
       <div className="controls">
@@ -123,6 +125,9 @@ const Controls = ({
           max={100}
           value={volume}
           onChange={(e) => setVolume(e.target.value)}
+          style={{
+            background: `linear-gradient(to right, #f50 ${volume}%, #ccc ${volume}%)`,
+          }}
         />
       </div>
     </div>
