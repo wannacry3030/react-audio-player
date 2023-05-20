@@ -10,7 +10,7 @@ import {
   IoPauseSharp,
 } from "react-icons/io5";
 
-const Controls = ({ audioRef }) => {
+const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const togglePlayPause = () => {
     setIsPlaying((prev) => !prev);
@@ -28,8 +28,16 @@ const Controls = ({ audioRef }) => {
   const repeat = useCallback(() => {
     console.log("run");
 
+    const currentTime = audioRef.current.currentTime;
+    setTimeProgress(currentTime);
+    progressBarRef.current.value = currentTime;
+    progressBarRef.current.style.setProperty(
+      "--range-progress",
+      `${(progressBarRef.current.value / duration) * 100}%`
+    );
+
     playAnimationRef.current = requestAnimationFrame(repeat);
-  }, []);
+  }, [audioRef, progressBarRef, duration, setTimeProgress]);
 
   useEffect(() => {
     if (isPlaying) {

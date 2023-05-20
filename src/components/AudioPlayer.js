@@ -24,7 +24,9 @@ const AudioPlayer = () => {
         <DisplayTrack
           {...{ currentTrack, audioRef, setDuration, progressBarRef }}
         />
-        <Controls {...{ audioRef }} />
+        <Controls
+          {...{ audioRef, progressBarRef, duration, setTimeProgress }}
+        />
         <ProgressBar
           {...{ progressBarRef, audioRef, timeProgress, duration }}
         />
