@@ -1,4 +1,8 @@
 const ProgressBar = ({ ProgressBarRef }) => {
+  const handleProgressChange = () => {
+    console.log(ProgressBarRef.current.value);
+  };
+
   return (
     <div className="progress">
       <span className="time current">00:00</span>
