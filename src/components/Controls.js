@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef, useCallback } from "react";
+import { BsSkipBackward } from "react-icons/bs";
 
 //icones
 import {
@@ -26,8 +27,6 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
   const playAnimationRef = useRef();
 
   const repeat = useCallback(() => {
-    console.log("run");
-
     const currentTime = audioRef.current.currentTime;
     setTimeProgress(currentTime);
     progressBarRef.current.value = currentTime;
@@ -42,20 +41,28 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
-      playAnimationRef.current = requestAnimationFrame(repeat);
     } else {
       audioRef.current.pause();
-      cancelAnimationFrame(playAnimationRef.current);
     }
+    playAnimationRef.current = requestAnimationFrame(repeat);
   }, [isPlaying, audioRef, repeat]);
+
+  const skipForward = () => {};
+
+  const skipBackward = () => {};
+
+  const handlePrevious = () => {};
+
+  const handleNext = () => {};
 
   return (
     <div className="controls-wrapper">
       <div className="controls">
-        <button>
+        <button onClick={handlePrevious}>
           <IoPlaySkipBackSharp />
         </button>
-        <button>
+
+        <button onClick={skipBackward}>
           <IoPlayBackSharp />
         </button>
 
@@ -63,11 +70,11 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
           {isPlaying ? <IoPauseSharp /> : <IoPlaySharp />}
         </button>
 
-        <button>
+        <button onClick={skipForward}>
           <IoPlayForwardSharp />
         </button>
 
-        <button>
+        <button onClick={handleNext}>
           <IoPlaySkipForwardSharp />
         </button>
       </div>

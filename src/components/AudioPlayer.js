@@ -8,9 +8,10 @@ import ProgressBar from "./ProgressBar";
 
 //renderizando o conteudo da musica na tela do usuario
 const AudioPlayer = () => {
-  const [currentTrack, setCurrentTrack] = useState(tracks[0]);
+  const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
   const [timeProgress, setTimeProgress] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [trackIndex, setTrackIndex] = useState(0);
 
   //referencia
   const audioRef = useRef();
@@ -25,7 +26,16 @@ const AudioPlayer = () => {
           {...{ currentTrack, audioRef, setDuration, progressBarRef }}
         />
         <Controls
-          {...{ audioRef, progressBarRef, duration, setTimeProgress }}
+          {...{
+            audioRef,
+            progressBarRef,
+            duration,
+            setTimeProgress,
+            tracks,
+            trackIndex,
+            setTrackIndex,
+            setCurrentTrack,
+          }}
         />
         <ProgressBar
           {...{ progressBarRef, audioRef, timeProgress, duration }}
