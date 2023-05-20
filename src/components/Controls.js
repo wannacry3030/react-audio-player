@@ -10,6 +10,7 @@ import {
   IoPlaySharp,
   IoPauseSharp,
 } from "react-icons/io5";
+import { IoMdVolumeHigh, IoMdVolumeOff, IoMdVolumeLow } from "react-icons/io";
 
 const Controls = ({
   audioRef,
@@ -118,7 +119,15 @@ const Controls = ({
         </button>
       </div>
       <div className="volume">
-        <buttons>icons</buttons>
+        <buttons onClick={() => setMuteVolume((prev) => !prev)}>
+          {muteVolume || volume < 5 ? (
+            <IoMdVolumeOff />
+          ) : volume < 40 ? (
+            <IoMdVolumeLow />
+          ) : (
+            <IoMdVolumeHigh />
+          )}
+        </buttons>
         <input
           type="range"
           min={0}
