@@ -11,7 +11,16 @@ import {
   IoPauseSharp,
 } from "react-icons/io5";
 
-const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
+const Controls = ({
+  audioRef,
+  progressBarRef,
+  duration,
+  setTimeProgress,
+  tracks,
+  trackIndex,
+  setTrackIndex,
+  setCurrentTrack,
+}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const togglePlayPause = () => {
     setIsPlaying((prev) => !prev);
@@ -47,13 +56,34 @@ const Controls = ({ audioRef, progressBarRef, duration, setTimeProgress }) => {
     playAnimationRef.current = requestAnimationFrame(repeat);
   }, [isPlaying, audioRef, repeat]);
 
-  const skipForward = () => {};
+  const skipForward = () => {
+    audioRef.current.currentTime += 15;
+  };
 
-  const skipBackward = () => {};
+  const skipBackward = () => {
+    audioRef.current.currentTime -= 15;
+  };
 
-  const handlePrevious = () => {};
+  const handlePrevious = () => {
+    if (trackIndex === 0) {
+      let lastTrackIndex = tracks.length - 1;
+      setTrackIndex(lastTrackIndex);
+      setCurrentTrack(tracks[lastTrackIndex]);
+    } else {
+      setTrackIndex((prev) => prev - 1);
+      setCurrentTrack(tracks[trackIndex - 1]);
+    }
+  };
 
-  const handleNext = () => {};
+  const handleNext = () => {
+    if (trackIndex >= tracks.length - 1) {
+      setTrackIndex(0);
+      setCurrentTrack(tracks[0]);
+    } else {
+      setTrackIndex((prev) => prev + 1);
+      setCurrentTrack(tracks[trackIndex + 1]);
+    }
+  };
 
   return (
     <div className="controls-wrapper">
