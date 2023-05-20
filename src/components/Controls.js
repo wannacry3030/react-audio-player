@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 
 //icones
 import {
@@ -22,6 +22,24 @@ const Controls = ({ audioRef }) => {
       audioRef.current.pause();
     }
   }, [isPlaying, audioRef]);
+
+  const playAnimationRef = useRef();
+
+  const repeat = useCallback(() => {
+    console.log("run");
+
+    playAnimationRef.current = requestAnimationFrame(repeat);
+  }, []);
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play();
+      playAnimationRef.current = requestAnimationFrame(repeat);
+    } else {
+      audioRef.current.pause();
+      cancelAnimationFrame(playAnimationRef.current);
+    }
+  }, [isPlaying, audioRef, repeat]);
 
   return (
     <div className="controls-wrapper">
