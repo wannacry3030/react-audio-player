@@ -85,15 +85,14 @@ const Controls = ({
       setCurrentTrack(tracks[trackIndex + 1]);
     }
   };
-
+  const [muteVolume, setMuteVolume] = useState(false);
   const [volume, setVolume] = useState(60);
   useEffect(() => {
     if (audioRef) {
       audioRef.current.volume = volume / 100;
+      audioRef.current.muted = muteVolume;
     }
-  }, [volume, audioRef]);
-
-  const [muteVolume, setMuteVolume] = useState(false);
+  }, [volume, audioRef, muteVolume]);
 
   return (
     <div className="controls-wrapper">
