@@ -29,7 +29,6 @@ body {
   filter: blur();
   border-radius: 9px;
 }
-
 .inner {
   max-width: 1300px;
   margin: 0 auto;
