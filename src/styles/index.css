@@ -49,16 +49,16 @@ body {
   border-radius: 10px;
   background: linear-gradient(
     45deg,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000,
-    #fb0094,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff0000
+    #070a09,
+    #7c7ba1,
+    #9f9bbc,
+    #4e4562,
+    #615e83,
+    #070a09,
+    #7c7ba1,
+    #9f9bbc,
+    #4e4562,
+    #615e83
   );
   background-size: 400%;
   width: calc(100% + 4px);
