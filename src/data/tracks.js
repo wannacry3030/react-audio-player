@@ -1,4 +1,4 @@
-//arquivo de uaudio
+//arquivo de audio
 import hang from "./Hang_em_all.mp3";
 import tzu from "./Looking_for_tracy_tzu.mp3";
 import matt from "./Meet_matt_stryker.mp3";
