@@ -14,7 +14,8 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   color: #333;
-  background-image: linear-gradient(180deg, #171a24, #696977);
+  background-color: #171717;
+  /* background-image: linear-gradient(180deg, #171a24, #696977); */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -63,7 +64,7 @@ body {
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   z-index: -1;
-  animation: steam 20s linear infinite;
+  animation: steam 30s linear infinite;
 }
 
 @keyframes steam {
