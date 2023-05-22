@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef, useCallback } from "react";
-import { BsSkipBackward } from "react-icons/bs";
 
 //icones
 import {
