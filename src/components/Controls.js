@@ -21,11 +21,16 @@ const Controls = ({
   trackIndex,
   setTrackIndex,
   setCurrentTrack,
+  handleNext,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [muteVolume, setMuteVolume] = useState(false);
+  const [volume, setVolume] = useState(60);
+
   const togglePlayPause = () => {
     setIsPlaying((prev) => !prev);
   };
+
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
@@ -76,17 +81,6 @@ const Controls = ({
     }
   };
 
-  const handleNext = () => {
-    if (trackIndex >= tracks.length - 1) {
-      setTrackIndex(0);
-      setCurrentTrack(tracks[0]);
-    } else {
-      setTrackIndex((prev) => prev + 1);
-      setCurrentTrack(tracks[trackIndex + 1]);
-    }
-  };
-  const [muteVolume, setMuteVolume] = useState(false);
-  const [volume, setVolume] = useState(60);
   useEffect(() => {
     if (audioRef) {
       audioRef.current.volume = volume / 100;
