@@ -229,15 +229,12 @@ button svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
 
   .title {
     color: #fff;
     font-weight: 100;
     font-size: 22px;
-    margin-bottom: 0;
-    padding: 2px;
     line-height: 37px;
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
   }
@@ -257,17 +254,6 @@ button svg {
     align-self: center;
   }
 
-  .audio-icon {
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background: #989898;
-  }
-
   .audio-image img {
     object-fit: cover;
     width: 100%;
@@ -281,7 +267,7 @@ button svg {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    margin-top: 1px;
   }
 
   .controls button,
@@ -317,9 +303,5 @@ button svg {
     color: #ffffff;
     font-size: 16px;
     line-height: 46px;
-  }
-
-  .controls-wrapper > * {
-    margin: 10px;
   }
 }
