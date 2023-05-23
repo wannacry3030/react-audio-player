@@ -187,21 +187,31 @@ button svg {
   color: #ce413d;
 }
 
-/* Top bar */
-.top__bar {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  text-align: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  background-color: #fafafa;
-  border-bottom: 1px solid #f0f0f2;
-}
+@media (max-width: 34em) {
+  html,
+  body {
+    font-size: 15px;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    color: #333;
+    background-color: #171717;
+    /* background-image: linear-gradient(180deg, #171a24, #696977); */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-.top__bar a {
-  color: inherit;
-}
-
-.top__bar p {
-  margin: 0;
+  .audio-player {
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    background: linear-gradient(0deg, #000000d9, #272727d9);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    border-radius: 9px;
+    width: 80vw;
+    height: 90vh;
+  }
 }
