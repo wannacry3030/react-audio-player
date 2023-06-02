@@ -1,28 +1,49 @@
 //arquivo de audio
-import hang from "./Hang_em_all.mp3";
-import tzu from "./Looking_for_tracy_tzu.mp3";
-import matt from "./Meet_matt_stryker.mp3";
+
+import horizon1 from "./Daft Punk - Horizon Ouverture.mp3";
+import horizoncd from "./Daft Punk - Horizon (Japan CD).mp3";
+import GLBTM from "./Daft Punk - GLBTM (Studio Outtakes).mp3";
+import repeat from "./Daft Punk - Infinity Repeating (2013 Demo) (feat. Julian Casablancas+The Voidz).mp3";
 
 //thumbnail da musica
 import ram10 from "./ram10.jpeg";
 
 export const tracks = [
+  //////////////////////////////
   {
-    title: "Carpenter Brut = Hang em all",
-    src: hang,
-    author: "Carpenter Brut",
+    title: "Horizon Ouverture",
+    src: horizon1,
+    author: "Daft punk",
     thumbnail: ram10,
   },
   {
-    title: "Carpenter Brut = Looking for tracy tzu",
-    src: tzu,
-    author: "Carpenter Brut",
+    title: "Horizon (Japan CD)",
+    src: horizoncd,
+    author: "Daft punk",
     thumbnail: ram10,
   },
   {
-    title: "Carpenter Brut = Meet matt stryker",
-    src: matt,
-    author: "Carpenter Brut",
+    title: "GLBTM (Studio Outtakes)",
+    src: GLBTM,
+    author: "Daft punk",
+    thumbnail: ram10,
+  },
+  {
+    title: "Infinity Repeating (feat. Julian Casablancas+The Voidz)",
+    src: repeat,
+    author: "Daft punk",
+    thumbnail: ram10,
+  },
+  {
+    title: "Horizon (Japan CD)",
+    src: horizoncd,
+    author: "Daft punk",
+    thumbnail: ram10,
+  },
+  {
+    title: "GLBTM (Studio Outtakes)",
+    src: GLBTM,
+    author: "Daft punk",
     thumbnail: ram10,
   },
 ];
