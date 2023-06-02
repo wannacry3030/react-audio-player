@@ -7,6 +7,8 @@ import repeat from "./Daft Punk - Infinity Repeating (2013 Demo) (feat. Julian C
 import gl from "./Daft Punk - GL (Early Take) ft. Pharrell Williams, Nile Rodgers.mp3";
 import prime from "./Daft Punk - Prime (2012 Unfinished).mp3";
 import lytd from "./Daft Punk - LYTD (Vocoder Tests) ft. Pharrell Williams.mp3";
+import time from "./Daft Punk - The Writing of Fragments of Time (RAM 10th Anniversary) ft. Todd Edwards.mp3";
+import touch from "./Touch (2021 Epilogue) (feat. Paul Williams).mp3";
 
 //thumbnail da musica
 import ram10 from "./ram10.jpeg";
@@ -56,14 +58,14 @@ export const tracks = [
     thumbnail: ram10,
   },
   {
-    title: "GL (Early Take) ft. Pharrell Williams, Nile Rodgers",
-    src: gl,
+    title: "The Writing of Fragments of Time ft. Todd Edwards",
+    src: time,
     author: "Daft punk",
     thumbnail: ram10,
   },
   {
-    title: "Daft Punk - Prime (2012 Unfinished)",
-    src: prime,
+    title: "Touch (2021 Epilogue) (feat. Paul Williams)",
+    src: touch,
     author: "Daft punk",
     thumbnail: ram10,
   },
